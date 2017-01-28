@@ -51,6 +51,9 @@
       <HintPath>..\packages\Glass.Mapper.Sc.Core.4.3.4.196\lib\net45\Glass.Mapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Glass.Mapper.Sc.Mvc">
+      <HintPath>..\packages\Glass.Mapper.Sc.Core.4.3.4.196\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Ignition.Foundation.CompositionRoot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Ignition.Foundation.CompositionRoot.1.0.0.5297\lib\net452\Ignition.Foundation.CompositionRoot.dll</HintPath>
       <Private>True</Private>
@@ -83,6 +86,30 @@
     <Reference Include="SimpleInjector.Packaging, Version=3.3.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.Packaging.3.3.2\lib\net40-client\SimpleInjector.Packaging.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\_Publish\_Source\bin\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Core">
+      <HintPath>..\_Publish\_Source\bin\Sitecore.Analytics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Model">
+      <HintPath>..\_Publish\_Source\bin\Sitecore.Analytics.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Client">
+      <HintPath>..\_Publish\_Source\bin\Sitecore.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch">
+      <HintPath>..\_Publish\_Source\bin\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq">
+      <HintPath>..\_Publish\_Source\bin\Sitecore.ContentSearch.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\_Publish\_Source\bin\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\_Publish\_Source\bin\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -128,6 +155,9 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="App_Config\Include\Ignition\Ignition.config" />
+    <Content Include="Views\Shared\Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\MainFrame.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -142,12 +172,11 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
